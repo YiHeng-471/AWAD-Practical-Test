@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Student2206205Controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::view('/addParticipant', 'addParticipant');
+Route::post('/addParticipant', [Student2206205Controller::class, 'addParticipant']);
 
 Route::get('/', function () {
     return view('welcome');
